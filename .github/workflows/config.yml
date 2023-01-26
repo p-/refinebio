@@ -214,6 +214,7 @@ jobs:
           mkdir -p workers/test_volume
           sudo chmod -R a+rw workers/test_volume
           ./common/run_tests.sh
+          sudo -E chown -R $USER:$USER data_store
           .github/scripts/upload_test_coverage.sh common
 
       - name: Push built docker images

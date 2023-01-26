@@ -122,7 +122,6 @@ else
             --cache-from $CACHED_IMAGE \
             --platform linux/amd64 \
             --progress plain \
-            --push \
             .
         finished=$?
         attempts=$((attempts+1))
