@@ -23,6 +23,8 @@ RUN pip3 install --ignore-installed --no-cache-dir -r requirements.txt && \
 COPY common/ .
 COPY config config
 
+RUN rm -rf /root/.cache/*
+
 ARG SYSTEM_VERSION
 ENV SYSTEM_VERSION=$SYSTEM_VERSION
 
