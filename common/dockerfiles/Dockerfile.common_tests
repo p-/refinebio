@@ -20,6 +20,9 @@ RUN pip3 install --ignore-installed --no-cache-dir -r requirements.txt && \
     # pip-compile throws an error for it.
     pip3 install --ignore-installed --no-cache-dir rpy2==3.4.5
 
+COPY common/requirements.txt .
+RUN pip3 install -r requirements.txt
+
 COPY common/ .
 COPY config config
 
